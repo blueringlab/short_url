@@ -1,2 +1,2 @@
-Please refer to "./READMEmd".
+Please refer to "./README.md" file.
 Thank you.
