@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  short-url:
+    build:
+      target: tester
+      args:
+        - MIX_ENV=test
+        - DATABASE_URL=ecto://postgres:postgres@short-url-db/short-url_test
+        - RELEASE_ENV=test
+        - SECRET_KEY_BASE=secret_url
+    image: image/short-url-test
+    ports:
+      - "4002:4002"
+    environment:
+      - MIX_ENV=test
+      - DATABASE_URL=ecto://postgres:postgres@short-url-db/short-url_test
+      - RELEASE_ENV=test
+      - SECRET_KEY_BASE=secret_url
