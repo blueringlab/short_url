@@ -41,11 +41,6 @@ docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm short-u
 
 ## Run Application
 ---
-### Build Prod images
----
-```
-docker-compose -f docker-compose.yml build 
-```
 
 ### Init Prod DB
 ---
@@ -63,5 +58,7 @@ docker-compose -f docker-compose.yml up
 ```
 
 ## Landing page once the application is up
+---
+Open browser with `http://localhost:4000/`
 
 ![alt tag](./landing-screen.png)
