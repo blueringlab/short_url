@@ -8,8 +8,9 @@ services:
         RELEASE_ENV: "${RELEASE_ENV}"
         DATABASE_URL: "${DATABASE_URL}"
         SECRET_KEY_BASE: "${SECRET_KEY_BASE}"
-
     image: image/short-url-base
+    depends_on:
+      - short-url-db    
     environment:
       MIX_ENV: "${MIX_ENV}"
       RELEASE_ENV: "${RELEASE_ENV}"
