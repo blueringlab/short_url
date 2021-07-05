@@ -9,6 +9,8 @@ services:
         - RELEASE_ENV=test
         - SECRET_KEY_BASE=secret_url
     image: image/short-url-test
+    depends_on:
+      - short-url-db    
     ports:
       - "4002:4002"
     environment:
