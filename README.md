@@ -47,7 +47,7 @@ docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm short-u
 It is required to run once to initiate DB database and schemas. 
 
 ```
-docker-compose -f docker-compose.yml -f docker-compose.base.yml run --rm short-url mix setup
+docker-compose -f docker-compose.yml -f docker-compose.base.yml run --rm short-url mix ecto.setup
 ```
 
 ## Build and Run
