@@ -37,8 +37,6 @@ export RELEASE_ENV=prod
 
 ```
 docker-compose -f docker-compose.yml -f docker-compose.test.yml build
-docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm short-url mix ecto.create
-docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm short-url mix ecto.migrate
 docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm short-url mix test
 ```
 
@@ -51,9 +49,9 @@ It requires to run once to initiate DB database and schemas.
 
 ```
 docker-compose -f docker-compose.yml -f docker-compose.base.yml build
-docker-compose -f docker-compose.yml -f docker-compose.base.yml run --rm short-url mix ecto.create
-docker-compose -f docker-compose.yml -f docker-compose.base.yml run --rm short-url mix ecto.migrate
+docker-compose -f docker-compose.yml -f docker-compose.base.yml run --rm short-url mix ecto.setup
 ```
+No worry about `Could not find static manifest` error for now.
 
 ## Build and Run
 
